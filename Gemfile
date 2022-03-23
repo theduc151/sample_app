@@ -5,11 +5,11 @@ ruby "3.0.0"
 
 gem "rails",            "~> 7.0.2", ">= 7.0.2.3"
 gem "puma",             "~> 5.0"
-gem "sass-rails",       "6.0.0"
+gem "sass-rails",       "6.0.0", require: false
 gem "webpacker",        "4.0.7"
 gem "turbolinks",       "5.2.0"
 gem "jbuilder",         "2.9.1"
-gem "bootsnap",         "1.4.4", require: false
+gem "bootsnap",         ">= 1.4.4", require: false
 gem "sprockets-rails"
 gem "importmap-rails"
 gem "turbo-rails"

@@ -6,7 +6,7 @@ ruby "3.0.0"
 gem "rails",            "~> 7.0.2", ">= 7.0.2.3"
 gem "puma",             "~> 5.0"
 gem "sass-rails",       "6.0.0", require: false
-# gem "webpacker",        "4.0.7"
+gem "bootstrap-sass",   ">= 3.4"
 gem "turbolinks",       "5.2.0"
 gem "jbuilder",         "2.9.1"
 gem "bootsnap",         ">= 1.4.4", require: false
@@ -19,6 +19,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 group :development, :test do
   gem "sqlite3", "~> 1.4"
+  # gem "pg"
   gem "byebug", platforms: %i[ mri mingw x64_mingw ]
 end
 
@@ -41,8 +42,8 @@ group :test do
 end
 
 
-group :production do
-  gem "pg", "1.1.4"
-end
+# group :production do
+#   gem "pg", "1.3.4"
+# end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

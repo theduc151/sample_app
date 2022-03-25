@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.0.0"
 
-gem "rails", "~> 7.0.2", ">= 7.0.2.3"
+gem "rails", "~> 6.1.0.rc1"
 gem "puma", "~> 5.0"
 gem "bcrypt", "3.1.13"
 gem "sass-rails", "6.0.0", require: false
@@ -13,6 +13,8 @@ gem "jbuilder", "2.9.1"
 gem "bootsnap", ">= 1.4.4", require: false
 gem "sprockets-rails"
 gem "importmap-rails"
+gem "jquery-rails"
+gem 'webpacker', github: 'rails/webpacker'
 gem "turbo-rails"
 gem "stimulus-rails"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]

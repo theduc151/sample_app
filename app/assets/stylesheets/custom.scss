@@ -74,6 +74,16 @@ p {
     text-decoration: none;
   }
 }
+.btn-custom {
+  color: #9d9d9d;
+  background-color: $gray_darker;
+  padding-top: 15px;
+  border: none;
+  &:hover {
+    color: $white;
+    background-color: $gray_darker;
+  }
+}
 
 /* footer */
 footer {

@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 91950218dd39119e420ca431fc9fae09b53986c7
+  branch: master
+  specs:
+    faker (2.20.0)
+      i18n (>= 1.8.11, < 2)
+
+GIT
   remote: https://github.com/rails/webpacker.git
   revision: 14dcce2c23a207062e0fc4ebed6042381dabd66a
   specs:
@@ -82,6 +90,8 @@ GEM
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
+    bootstrap-will_paginate (1.0.0)
+      will_paginate
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.28.0)
@@ -252,6 +262,7 @@ GEM
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    will_paginate (3.3.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.5.4)
@@ -263,8 +274,10 @@ DEPENDENCIES
   bcrypt (= 3.1.13)
   bootsnap (>= 1.4.4)
   bootstrap-sass (>= 3.4)
+  bootstrap-will_paginate (= 1.0.0)
   byebug
   capybara (= 3.28.0)
+  faker!
   guard (= 2.15.0)
   guard-minitest (= 2.4.6)
   importmap-rails
@@ -289,6 +302,7 @@ DEPENDENCIES
   web-console (= 4.0.1)
   webdrivers (= 4.1.2)
   webpacker!
+  will_paginate (~> 3.1)
 
 RUBY VERSION
    ruby 3.0.0p0

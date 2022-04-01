@@ -1,0 +1,3 @@
+document.querySelector("form-comment-<%= micropost.id %>").innerHTML = (
+"<%= j render 'comments/comment_form', comment: @micropost.comment %>"
+)

@@ -98,13 +98,20 @@ p {
   .btn-delete {
     width: 7%;
     border: none;
-    background-color: white;
+    background-color: $white;
     color: #337ab7;
     padding-left: 0.5px;
     &:hover {
       color: #23527c;
       text-decoration-line: underline;
     }
+  }
+}
+.btn-comment {
+  border: 0;
+  background-color: $white;
+  &:hover {
+    color: black;
   }
 }
 
@@ -303,4 +310,8 @@ span.image {
   input {
     border: 0;
   }
+}
+
+.display-hidden {
+  display: none;
 }

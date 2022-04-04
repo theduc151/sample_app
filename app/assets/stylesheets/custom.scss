@@ -298,6 +298,12 @@ input {
     margin-right: 10px;
     margin-top: 5px;
   }
+  .ml-0 {
+    margin-left: 0;
+  }
+  .mt-4 {
+    margin-top: 1.5rem;
+  }
 }
 aside {
   textarea {
@@ -314,4 +320,8 @@ span.image {
 
 .display-hidden {
   display: none;
+}
+
+.text-dark {
+  color: $gray-dark;
 }

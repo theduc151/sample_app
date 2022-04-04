@@ -10,18 +10,19 @@ export { application }
 
 
 $(document).ready(function () {
-    var flip = 0;
+    var flip1 = 0;
     $(document).on('click', '.add-form-comment-btn', function () {
         var html = $('.comment-form').html();
         $('#micropost-' + $(this).data('micropost-id')).append(html);
-        $('.input-comment').toggle(flip++ % 2 === 0);
+        $('.input-comment').toggle(flip1++ % 2 === 0);
     });
+
 
     $(document).on('click', '.comment-submit', function () {
         // lay id bai post
-        var micropostId = $(this).closest(".micropost").data("id");
+        var micropostId = $(this).closest(".microposts").data("id");
         //lay noi dung input
-        var content = $(this).siblings(".comment-content").val()
+        var content = $(this).siblings(".comment-content").val();
 
         $.ajax({
             url: '/comments',
@@ -34,7 +35,8 @@ $(document).ready(function () {
             },
             dataType: 'JSON',
             success: function (data) {
-                appendText(data.comment.comment_content, micropostId)
+                // appendText(data.comment.comment_content, micropostId)
+                location.reload();
             }
         })
     });

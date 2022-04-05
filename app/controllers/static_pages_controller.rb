@@ -5,8 +5,6 @@ class StaticPagesController < ApplicationController
       @feed_items = current_user.feed.paginate(page: params[:page])
       # @microposts = Micropost.all
       # @comment = @microposts.comments
-      # byebug
-      # byebug
     end
   end
 

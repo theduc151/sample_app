@@ -17,25 +17,32 @@
     <div class="form-group display-hidden comment-form">
       <%= render "comments/input_comment" %>
     </div>
-    <div class="mt-4" id="micropost-<%= micropost.id %>" >
+    <div class="mt-4" id="micropost-<%= micropost.id %>">
       <% micropost.comments.each do |comment| %>
         <div class="col-md-1">
           <%= gravatar_for @user, size: 30 %>
         </div>
         <div class="col-md-11">
-          <p><%= link_to micropost.user.name, micropost.user %></p>
+          <p><%= link_to @user.name, micropost.user %></p>
           <p class="text-dark"><%= comment.comment_content%></p>
-          <span>
-            <%= button_tag "Reply", class: "btn-comment add-form-comment-btn" %>
-            <%#= link_to 'reply', new_comment_path( parent_id: comment.id), remote: true, class: 'd-block' %>
+          <%= button_tag "Reply", class: "btn-comment add-form-reply-btn", data: {comment_id: comment.id} %> <br>
+          <span id="replies-<%= comment.id %>" class="comments" data-id="<%= comment.id %>" >
+            <div class="form-group display-hidden reply-form">
+              <%= render "comments/input_reply" %>
+            </div>
           </span>
-        </div>
-        <% if comment.replies.any? %>
-          <% comment.replies.each do |reply| %>
-            <%= render partial: 'comments/reply', locals: { reply: reply } %>
+          <% if(comment.parent_id.blank?) %>
+            <% comment.replies.each do |reply| %>
+              <div class="col-md-1">
+                <%= gravatar_for @user, size: 30 %>
+              </div>
+              <div class="col-md-11">
+                <p><%= link_to @user.name %></p>
+                <p class="text-dark"><%= reply.comment_content%></p>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
-        <div id="reply-form-<%= comment.id %>"></div>
+        </div>
       <% end %>
     </div>
   </div>
